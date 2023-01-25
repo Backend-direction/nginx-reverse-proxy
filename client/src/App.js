@@ -14,7 +14,7 @@ function App() {
 
     if (code === 404) {
       try {
-        await fetch('/api/errors/4xx')
+        await fetch('http://localhost:5000/errors/4xx', { redirect: 'follow' })
       } catch (e) {
         console.log(e)
       }

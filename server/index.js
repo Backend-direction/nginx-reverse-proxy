@@ -13,13 +13,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/errors/4xx', async (req, res) => {
-  res.send('dsdsds')
-  // res.status(401).send('4xx error');
+  res.status(401).send('4xx error');
 });
 
 app.get('/errors/5xx', async (req, res) => {
-  // res.status(500).send('5xx error');
-  res.redirect('http://localhost:3050/error')
+  res.status(500).send('5xx error');
 });
 
 app.listen(PORT, (err) => {
